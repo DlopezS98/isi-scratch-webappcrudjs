@@ -1,3 +1,9 @@
+function goCreateProduct() {
+	const url = new URL(window.location);
+	url.pathname = "/admin/products/create.html";
+	window.location.href = url.toString();
+}
+
 function createProductsTable() {
 	const columns = [
 		{
