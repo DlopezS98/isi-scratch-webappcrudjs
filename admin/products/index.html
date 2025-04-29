@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../admin.css">
-		<script src="../../auth.js"></script>
+		<link rel="stylesheet" href="../admin.css" />
+		<link rel="stylesheet" href="../data-table.css" />
+		<!-- <script src="../../auth.js"></script> -->
 		<title>Products</title>
 	</head>
 	<body>
@@ -29,6 +30,10 @@
 			<main class="admin-main-container">
 				<div class="admin-main-content container py-3">
 					Product List
+					<div
+						id="products-container"
+						class="isi-datagrid-container shadow-md"
+					></div>
 				</div>
 				<footer class="admin-footer">
 					<p>Admin Footer</p>
@@ -37,5 +42,7 @@
 		</div>
 
 		<script src="../admin.js"></script>
+		<script src="../data-table.js"></script>
+		<script src="./index.js"></script>
 	</body>
 </html>
