@@ -127,6 +127,7 @@
 
 .admin-main-content {
 	grid-area: admin-content;
+	padding: 24px;
 }
 
 .admin-footer {
