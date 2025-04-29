@@ -6,7 +6,7 @@ function createDataTable(containerId, columns, rows) {
 	const thead = document.createElement("thead");
 	const headerRow = document.createElement("tr");
 	columns.forEach((column) => {
-		headerRow.innerHTML += `<th>${column.header}</th>`;
+		headerRow.innerHTML += `<th>${column.title}</th>`;
 	});
 	thead.appendChild(headerRow);
 
