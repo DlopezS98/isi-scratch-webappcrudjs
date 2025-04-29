@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./admin.css" />
+		<title>WEB APP ISI</title>
+	</head>
+	<body>
+		<div class="admin-container">
+			<header class="admin-header shadow-md">
+				<div class="admin-header-logo">
+					<img src="" class="App-logo" alt="logo" />
+				</div>
+				<div class="admin-header-toolbar">
+					<span class="user-name"></span>
+					<div class="user-avatar">
+						<img src="" class="App-logo" alt="logo" />
+					</div>
+				</div>
+			</header>
+			<aside class="admin-sidebar">
+				<ul id="admin-sidebar-menu">
+					<!-- <li>
+              <Link to="/admin/dashboard" class={getIsActive("/admin/dashboard") || getIsActive("/admin")}>
+                <FiBarChart2 /> Dashboard
+              </Link>
+            </li> -->
+				</ul>
+				<div class="logout-container">
+					<button type="button">Logout</button>
+				</div>
+			</aside>
+			<main class="admin-main-container">
+				<div class="admin-main-content container py-3">content</div>
+				<footer class="admin-footer">
+					<p>Admin Footer</p>
+				</footer>
+			</main>
+		</div>
+
+    <script src="./admin.js"></script>
+	</body>
+</html>
