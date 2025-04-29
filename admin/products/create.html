@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../admin.css">
-		<script src="../../auth.js"></script>
+		<link rel="stylesheet" href="../admin.css" />
+		<!-- <script src="../../auth.js"></script> -->
 		<title>Products</title>
 	</head>
 	<body>
@@ -28,7 +28,74 @@
 			</aside>
 			<main class="admin-main-container">
 				<div class="admin-main-content container py-3">
-					Create Product
+					<form onsubmit="handleProductSubmit(event)" class="form shadow-md">
+						<div class="row gap-2 justify-center align-center">
+							<div class="column form__group">
+								<label htmlFor="name">Product name</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									placeholder="Product name"
+								/>
+							</div>
+							<div class="column form__group">
+								<label htmlFor="category">Category</label>
+								<select
+									id="category"
+									name="categoryId"
+									class="select"
+									title="Seleccionar categoría"
+								>
+									<option value="0">Select a category</option>
+									<option value="1">Category 1</option>
+									<option value="2">Category 2</option>
+									<option value="3">Category 3</option>
+								</select>
+							</div>
+						</div>
+						<div class="row gap-2 justify-center align-center">
+							<div class="column form__group">
+								<label htmlFor="quantity">Brand</label>
+								<select
+									id="brand"
+									name="brandId"
+									class="select"
+									title="Seleccionar marca"
+								>
+									<option value="0">Select a brand</option>
+									<option value="1">Brand 1</option>
+									<option value="2">Brand 2</option>
+									<option value="3">Brand 3</option>
+								</select>
+							</div>
+							<div class="column form__group">
+								<label htmlFor="price">Price</label>
+								<input
+									type="number"
+									id="price"
+									name="unitPrice"
+									placeholder="Product price"
+								/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="column form__group">
+								<label htmlFor="description">Description</label>
+								<textarea
+									id="description"
+									name="description"
+									placeholder="Product description"
+									rows="{5}"
+								></textarea>
+							</div>
+						</div>
+						<div class="column">
+							<button type="submit" variant="primary">
+								Create Product
+							</button>
+						</div>
+					</form>
 				</div>
 				<footer class="admin-footer">
 					<p>Admin Footer</p>
@@ -36,5 +103,6 @@
 			</main>
 		</div>
 		<script src="../admin.js"></script>
+		<script src="./create.js"></script>
 	</body>
 </html>
