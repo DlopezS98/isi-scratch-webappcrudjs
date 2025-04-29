@@ -1,5 +1,5 @@
-function createDataTable(columns, rows) {
-	const container = document.getElementById("isi-datagrid-container");
+function createDataTable(containerId, columns, rows) {
+	const container = document.getElementById(containerId);
 	const table = document.createElement("table");
 
 	// Create table header
@@ -52,4 +52,10 @@ function createDataTable(columns, rows) {
 		});
 		tbody.appendChild(tr);
 	});
+
+    // Append header and body to table
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    // Append table to container
+    container.appendChild(table);
 }
