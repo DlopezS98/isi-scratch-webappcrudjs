@@ -4,7 +4,7 @@ function goCreateProduct() {
 	window.location.href = url.toString();
 }
 
-function createProductsTable() {
+async function createProductsTable() {
 	const columns = [
 		{
 			title: "Name",
@@ -58,6 +58,18 @@ function createProductsTable() {
 			createdAt: new Date(),
 		},
 	];
+
+	const url = "http://localhost:5005/api/producto";
+	const token = localStorage.getItem("authToken") ?? "";
+	const response = await fetch(url, {
+		method: "GET",
+		headers: { 
+			"Content-Type": "application/json",
+			Authorization: "Bearer " + token
+		}
+	});
+	const productos = await response.json();
+	console.log(productos);
     
 	createDataTable("products-container", columns, rows);
 }
